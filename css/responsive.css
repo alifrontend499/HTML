@@ -1,0 +1,45 @@
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+    }
+
+    /* header */
+    .header .user-sec {
+        position: absolute;
+        top: 15px;
+        right: 0;
+    }
+
+    .header .search .st-form {
+        width: 290px;
+    }
+
+    .header .search {
+        padding: 0;
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .main-wrapper .main-wrapper-menu-list>li>a {
+        padding: 10px 14px 9px;
+        font-size: 15px;
+        border-radius: 0;
+        margin: 0 10px 10px 0px;
+    }
+
+    .select-purchase .head {
+        font-size: 33px;
+    }
+
+    .select-purchase .btns .btn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-wrapper .main-wrapper-menu-list>li>a {
+        padding: 10px 16px 7px;
+        font-size: 17px;
+
+    }
+}

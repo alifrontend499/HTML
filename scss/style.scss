@@ -1,0 +1,223 @@
+// sass --watch scss/style.scss:css/style.css --style compact
+@import "components/reset";
+@import "components/fonts";
+@import "components/variables";
+@import "components/mixins";
+@import "components/common";
+
+
+
+body {
+    font-family: proxima-regular, sans-serif;
+}
+
+@include min_width(1300px) {
+    max-width: 1250px;
+}
+
+// header
+header {
+    background-color: $primary-color;
+}
+
+.header {
+    $padd: 15px;
+    padding-top: $padd;
+    padding-bottom: $padd;
+
+    .logo {
+        width: 140px;
+
+        @include min_width(768px) {
+            width: 150px;
+        }
+    }
+
+    .search {
+        padding: 0 15px;
+
+        .st-form {
+            width: 300px;
+        }
+
+        input {
+            height: 37px;
+            border-radius: 50px;
+            border: none;
+
+        }
+
+        .icon {
+            i {
+                font-size: 14px;
+                color: #9d9d9d;
+            }
+        }
+    }
+
+    .user-sec {
+        .user-label {
+            overflow: hidden;
+
+            >a {
+                height: 35px;
+                width: 35px;
+                background-color: #fff;
+                padding: 5px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    height: 7px;
+                    width: 7px;
+                    background-color: $success-color;
+                    bottom: 1px;
+                    right: 2px;
+                    border-radius: 50%;
+                }
+            }
+
+            .user-menu {
+                top: 100%;
+                right: 100%;
+                width: 130px;
+                padding-top: 10px;
+                @include transformx(100%);
+                @include transition;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: 10px;
+                    top: -2px;
+                    border-width: 6px;
+                    border-style: solid;
+                    border-color: transparent;
+                    border-bottom-color: #fff;
+                }
+
+                >ul {
+                    border-radius: 4px;
+                    overflow: hidden;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+
+                    >li {
+                        &:not(:last-child) {
+                            border-bottom: 1px solid #dddddd;
+                        }
+
+                        >a {
+                            text-decoration: none;
+                            padding: 9px 15px;
+                            color: #848484;
+                            font-size: 15px;
+                            @include transition;
+                            background: #fff;
+
+                            &:hover {
+                                background-color: $primary-color;
+                                color: #fff;
+                            }
+
+                            >i {
+                                width: 15px;
+                                font-size: 13px;
+                            }
+
+                            >span {
+                                width: calc(100% - 15px);
+                                padding-left: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+
+                .user-menu {
+                    @include transformx(0);
+                    right: 0;
+                }
+
+                overflow: visible;
+            }
+
+        }
+    }
+}
+
+// main-wapper
+#main-wrapper {
+    background-color: $main-wrapper-bg;
+}
+
+.main-wrapper {
+    background-color: $main-wrapper-bg;
+
+    .main-wrapper-menu-list {
+        >li {
+            >a {
+                background-color: #fff;
+                padding: 13px 5px 9px;
+                color: #333;
+                font-size: 19px;
+                border-radius: 20px 20px 0 0;
+                text-decoration: none;
+                @include transition;
+
+                @include min_width(992px) {
+                    min-width: 135px;
+                }
+
+                @include min_width(1200px) {
+                    min-width: 155px;
+                }
+
+                &:hover,
+                &.active {
+                    background-color: $primary-color;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .main-wrapper-content {
+        background-color: #fff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+// select purchase
+#select-purchase {}
+
+.select-purchase {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include min_width(992px) {
+        padding-top: 170px;
+        padding-bottom: 170px;
+    }
+
+    .head {
+        font-size: 40px;
+        margin-bottom: 15px;
+
+        @include min_width(768px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .btns {
+        .btn {
+            width: 200px;
+        }
+    }
+}
