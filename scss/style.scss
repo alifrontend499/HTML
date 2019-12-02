@@ -221,3 +221,60 @@ header {
         }
     }
 }
+
+// accesories sec
+#accesories-sec {}
+
+.accesories-sec {
+    padding: 10px 0;
+
+    .top-form-sec {
+        padding: 20px 0;
+
+        @include min_width(992px) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    .def-table {
+        .plus-icon {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: $primary-color;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    .left {
+        .buttons {
+            margin-top: 40px;
+
+            .btn,
+            select {
+                width: 140px;
+                height: 45px;
+                margin: 0 6px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .right {
+        select.form-control {
+            background-color: transparent;
+            font-size: 12px;
+            padding: 0 5px;
+            box-shadow: none;
+        }
+
+        .textarea {
+            margin-top: 60px;
+            textarea{
+                border-color: #adadad;
+            }
+        }
+    }
+}
