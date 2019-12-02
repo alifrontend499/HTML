@@ -215,6 +215,11 @@ ul.st-left-multilevel-menu ul > li > a:active { background-color: #d91119; }
 .def-table > table > tbody.ligtblue-body > tr { background-color: #dcedff; border-bottom: 1px solid #c3c3c3; }
 .def-table > table > tfoot > tr > td { padding-top: 10px; }
 
+.modal-custom .modal-content { background: transparent; border: none; }
+.modal-custom .modal-header.custom { background: #ed1c24; border-radius: 25px 25px 0 0; padding: 8px 0 4px; }
+.modal-custom .modal-header.custom p { font-weight: bold; font-size: 35px; }
+.modal-custom .modal-body { background-color: #fff; }
+
 body { font-family: proxima-regular, sans-serif; }
 
 @media screen and (min-width: 1300px) { max-width: 1250px; }
@@ -260,10 +265,12 @@ header { background-color: #ed1c24; }
 .accesories-sec .top-form-sec { padding: 20px 0; }
 @media screen and (min-width: 992px) { .accesories-sec .top-form-sec { width: 90%; margin: 0 auto; } }
 .accesories-sec .def-table .plus-icon { height: 30px; width: 30px; border-radius: 50%; background-color: #ed1c24; color: #fff; text-decoration: none; }
-.accesories-sec .left .buttons { margin-top: 40px; }
-.accesories-sec .left .buttons .btn, .accesories-sec .left .buttons select { width: 140px; height: 45px; margin: 0 6px; font-size: 18px; }
+.accesories-sec .left .buttons { margin-top: 20px; }
+@media screen and (min-width: 992px) { .accesories-sec .left .buttons { margin-top: 40px; } }
+.accesories-sec .left .buttons .btn, .accesories-sec .left .buttons select { width: 140px; height: 45px; margin: 0 6px 12px; font-size: 18px; }
 .accesories-sec .right select.form-control { background-color: transparent; font-size: 12px; padding: 0 5px; box-shadow: none; }
-.accesories-sec .right .textarea { margin-top: 60px; }
+.accesories-sec .right .textarea { margin-top: 20px; }
+@media screen and (min-width: 992px) { .accesories-sec .right .textarea { margin-top: 60px; } }
 .accesories-sec .right .textarea textarea { border-color: #adadad; }
 
 /*# sourceMappingURL=style.css.map */

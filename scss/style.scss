@@ -250,13 +250,15 @@ header {
 
     .left {
         .buttons {
-            margin-top: 40px;
-
+            margin-top: 20px;
+            @include min-width(992px) {
+                margin-top: 40px;
+            }
             .btn,
             select {
                 width: 140px;
                 height: 45px;
-                margin: 0 6px;
+                margin: 0 6px 12px;
                 font-size: 18px;
             }
         }
@@ -271,7 +273,10 @@ header {
         }
 
         .textarea {
-            margin-top: 60px;
+            margin-top: 20px;
+            @include min-width(992px) {
+                margin-top: 60px;            
+            }
             textarea{
                 border-color: #adadad;
             }

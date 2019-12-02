@@ -978,9 +978,10 @@ ul.st-left-multilevel-menu {
     @include max_width(992px) {
         overflow: auto;
     }
+
     >table {
         width: 100%;
-            
+
         >thead>tr>th,
         >tbody>tr>td {
             padding: 10px 10px;
@@ -1024,4 +1025,27 @@ ul.st-left-multilevel-menu {
             }
         }
     }
+}
+
+// modal-custom
+.modal-custom {
+    .modal-content {
+        background: transparent;
+        border: none;
+    }
+
+    .modal-header.custom {
+        background: $primary-color;
+        border-radius: 25px 25px 0 0;
+        padding: 8px 0 4px;
+
+        p {
+            font-weight: bold;
+            font-size: 35px;
+        }
+    }
+    .modal-body {
+        background-color: #fff;
+    }
+
 }
