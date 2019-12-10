@@ -136,4 +136,13 @@ $(function () {
         // });
     })();
 
+    $('.payment-sec label > input').change(function() {
+        console.log("object")
+        if($(this).is(':checked')) {
+            $(this).parent().addClass('active').next('.content').slideDown(200)
+        } else {
+            $(this).parent().removeClass('active').next('.content').slideUp(200)
+        }
+    });
+
 });

@@ -335,6 +335,31 @@
             border: 2px solid #bebdbe;
         }
     }
+
+    &.with-camera-icon {
+        padding-right: 40px;
+
+        >.icon {
+            font-size: 20px;
+            top: 10px;
+            right: 5px;
+            color: #bebebe;
+            cursor: pointer;
+        }
+    }
+
+    &.with-text {
+        >input {
+            width: calc(100% - 150px);
+        }
+
+        >span {
+            width: 150px;
+            font-size: 18px;
+            padding-left: 5px;
+
+        }
+    }
 }
 
 .forgot-pass {
@@ -1044,8 +1069,99 @@ ul.st-left-multilevel-menu {
             font-size: 35px;
         }
     }
+
     .modal-body {
         background-color: #fff;
     }
 
+}
+
+.modal {
+    .modal-all-btns {
+        margin: 0 -5px;
+
+        .btn {
+            margin: 0 5px;
+        }
+
+        @include min_width(992px) {
+            margin: 30px 0 -10px;
+
+            .btn {
+                margin: 0 6px;
+                width: calc(33.3% - 15px);
+            }
+        }
+    }
+}
+
+// st default tabs with arrow
+.st-arrow-tabs-menues {
+    .nav-item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    .nav-link {
+        background: #efefef;
+        color: #333;
+        font-size: 16px;
+        @include transition;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent;
+        }
+    }
+
+    .nav-link:hover,
+    .nav-link.active,
+    .show>.nav-link {
+        background-color: $primary-color;
+        color: #fff;
+
+        &::after {
+            border-top-color: $primary-color;
+        }
+    }
+}
+
+.st-arrow-tabs-content {
+    // padding: 0 15px;
+    margin-top: 25px;
+}
+
+.plus-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    color: #fff;
+    text-decoration: none;
+}
+
+.plus-icon-with-text {
+    text-decoration: none !important;
+
+    >i {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        color: #fff;
+    }
+
+    >span {
+        color: $primary-color;
+        font-size: 14px;
+    }
 }
