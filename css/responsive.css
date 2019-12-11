@@ -34,6 +34,10 @@
     .select-purchase .btns .btn {
         font-size: 18px;
     }
+
+    .payment > .rt {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 992px) {

@@ -367,16 +367,20 @@ header {
         border: 1px solid #dddddd;
 
         &:not(:last-child) {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+            @include min_width(992px) {
+                margin-bottom: 25px;
+            }
         }
 
         >label {
-            min-height: 60px;
+            min-height: 50px;
             padding: 5px 15px;
             cursor: pointer;
             @include transition;
 
             @include min_width(992px) {
+                min-height: 60px;
                 padding-left: 25px;
                 padding-right: 25px;
             }
@@ -387,11 +391,16 @@ header {
             }
 
             .radio {
-                height: 23px;
-                width: 23px;
+                height: 20px;
+                width: 20px;
                 border: 1px solid #000;
                 border-radius: 50%;
                 position: relative;
+
+                @include min_width(992px) {
+                    height: 23px;
+                    width: 23px;
+                }
 
                 &:after {
                     position: absolute;
@@ -408,11 +417,12 @@ header {
             .text {
                 padding-left: 10px;
                 width: calc(100% - 23px);
-                font-size: 23px;
+                font-size: 20px;
                 color: #666;
 
                 @include min_width(992px) {
                     padding-left: 20px;
+                    font-size: 23px;
                 }
             }
 
@@ -474,13 +484,17 @@ header {
         }
 
         .table {
+
             th,
             td {
                 font-size: 16px;
                 padding: 15px 20px 15px;
             }
+
             .head-main {
-                th,td {
+
+                th,
+                td {
                     border-top: 1px solid #c8c8c8;
                 }
             }

@@ -86,7 +86,6 @@ $(function () {
     (function () {
         $('.docs-result > .mobile-filter-btn > .st-btn').click(function (ev) {
             ev.preventDefault();
-            console.log("object");
             $(this).parent().next().toggleClass('d-none');
         });
     })();
@@ -110,39 +109,16 @@ $(function () {
         });
     })();
 
-    // star-rating-ul
-    (function () {
-        $('.star-rating-ul > li label').hover(function () {
-            $(this).parent().addClass('active');
-            $(this).parent().prevAll().addClass('active');
-            $(this).parent().nextAll().removeClass('active');
-        }, function () {
-            if ($('>input', this).is(':checked')) {
-                $(this).parent().addClass('active');
-                $(this).parent().prevAll().addClass('active');
-                $(this).parent().nextAll().removeClass('active');
-            } else {
-                $(this).parent().removeClass('active');
-                $(this).parent().siblings().removeClass('active');
-            }
-        });
-
-        // $('.star-rating-ul > li label > input').change(function () {
-        //     if ($(this).is(':checked')) {
-        //         $(this).parent().parent().addClass('active');
-        //         $(this).parent().parent().prevAll().addClass('active');
-        //         $(this).parent().parent().nextAll().removeClass('active');
-        //     }
-        // });
-    })();
-
     $('.payment-sec label > input').change(function() {
-        console.log("object")
         if($(this).is(':checked')) {
-            $(this).parent().addClass('active').next('.content').slideDown(200)
-        } else {
-            $(this).parent().removeClass('active').next('.content').slideUp(200)
-        }
+            console.log("checked")
+            $(this).parent().addClass('active').parent().siblings().find('>label').removeClass('active')
+            $(this).parent().next('.content').slideDown(200).parent().siblings().find('>.content').slideUp(200)
+        } 
+        // if($(this).is(':not(:checked)')) {
+        //     console.log("unchecked")
+        //     $(this).parent().removeClass('active').next('.content').slideUp(200)
+        // }
     });
 
 });
